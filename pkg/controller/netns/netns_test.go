@@ -161,7 +161,7 @@ func TestIsProcess(t *testing.T) {
 		{
 			name:  "empty name directory",
 			entry: createMockDirEntry("", true),
-			want:  true, // strings.IndexFunc returns -1 for empty string, which means no non-numeric chars found
+			want:  true, // An empty name is not a valid process ID.
 		},
 	}
 
