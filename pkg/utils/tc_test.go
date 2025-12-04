@@ -405,15 +405,6 @@ func TestIntegration(t *testing.T) {
 	})
 }
 
-// Helper function to check if error contains specific text
-func assertErrorContains(t *testing.T, err error, substr string) {
-	if err == nil {
-		t.Errorf("Expected error containing '%s', got nil", substr)
-		return
-	}
-	assert.Contains(t, err.Error(), substr)
-}
-
 // Test error path coverage
 func TestErrorPaths(t *testing.T) {
 	t.Run("Interface without addresses", func(t *testing.T) {
