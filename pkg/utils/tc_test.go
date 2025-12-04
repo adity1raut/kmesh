@@ -435,7 +435,7 @@ func TestErrorPaths(t *testing.T) {
 
 	t.Run("Invalid mode values", func(t *testing.T) {
 		link := createMockLink("test0", 1)
-		
+
 		// Test various invalid modes
 		invalidModes := []int{-1, 0, 3, 100, -100}
 		for _, mode := range invalidModes {
